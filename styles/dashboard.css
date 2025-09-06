@@ -6,11 +6,16 @@
     font-family: 'Roboto' , sans-serif;
 }
 
+.hidden{
+    display: none !important;
+}
 .active{
-    background-color: #5f3dc4;
+    background: linear-gradient(to right,#3513a3,#087f5b);
     color: #fff;
 }
-
+.active span{
+    color: #fff;
+}
 html{
     font-size: 67.75%;
 }
@@ -62,7 +67,7 @@ html{
 }
 .sidebar li span{
     font-size: 2.1rem;
-    color: #5f3dc4;
+    /* color: #5f3dc4; */
     letter-spacing: .1rem;
     margin-top: 5px;
     font-weight: 700;
@@ -73,7 +78,7 @@ html{
     height: 100vh;
     display: grid;
     grid-template-columns: 2fr 1fr ;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 250px 450px;
     gap: 15px;
 }
 
@@ -97,20 +102,21 @@ html{
     width: 45%;
     height: 70%;
     border-radius: 11px;
-    background-color: #5f3dc4;
-    box-shadow: 4px 3px 10px 0px #0c061f;
+    background-color: #fff;
+    box-shadow: 4px 3px 10px 0px #cbcbcb;
     transition: all .4s;
     overflow: hidden;
 }
 .income .glow{
-    background-color: white;
+    background: linear-gradient(to right,#3513a3,#087f5b);
     height: 70%;
     border-radius: 70% 0% 0% 10%;
     opacity: .7;
 }
 .expense .glow{
-    background: linear-gradient(to right,#3513a3,#087f5b);
+    
     height: 70%;
+     background: linear-gradient(to right, #ff6b6b , #a61e4d);
     border-radius: 0% 70% 0% 10%;
     opacity: .7;
 }
@@ -119,14 +125,14 @@ html{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
+    color: #3513a3;
 }
 .expense .details {
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #3513a3;
+    color: #ff6b6b;
 }
 
 .details h2{
@@ -145,11 +151,12 @@ html{
     height: 70%;
     border-radius: 11px;
     background-color: #ffffff;
-    box-shadow: 4px 3px 10px 0px #3513a3;
+    box-shadow: 4px 3px 10px 0px #d9d9da;
     transition: all .4s;
+    overflow: hidden;
 }
 .income:hover , .expense:hover{
-     box-shadow: 10px 9px 10px 0px rgb(9, 4, 22);
+     box-shadow: 10px 9px 10px 0px rgb(147, 147, 147);
 }
 
 
@@ -173,10 +180,168 @@ html{
 
 
 .expense-list{
-    background-color: #f3f0ff;
+    /* background-color: #f3f0ff; */
+    border-radius: 11px;
+    padding: 20px 10px;
+    overflow-y: hidden;
+    
+}
+
+.clear-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.clear-container h2{
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    color: #a61e4d;
+}
+.clear{
+    padding: 7px 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, #ff6b6b , #a61e4d);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+
+.table-container {
+    padding: 20px 10px;
+  width: 100%;
+  height: 95%;
+  overflow-x: auto; 
+  overflow-y: scroll;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  /* overflow-y: scroll; */
+}
+
+
+.table-container thead {
+  background: #087f5b; 
+    font-size: 1.5rem;
+  color: #fff;
+}
+
+.table-container th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+/* Table rows */
+.table-container td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #111827;
+  vertical-align: top;
+}
+
+
+.table-container .description {
+  max-width: 260px; 
+  word-wrap: break-word;
+  white-space: normal;
+  line-height: 1.4;
+}
+.table-container table  tbody{
+    overflow-y: scroll;
+}
+
+/* Row hover */
+.table-container tbody tr:hover {
+  background: #c0c0c0;
+}
+
+/* Buttons */
+.table-container button {
+  
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    border-radius: 11px;
+    padding: 5px;
+   
+}
+.del-icon{
+    width: 20px;
+    stroke: #a61e4d;
     border-radius: 11px;
 }
-.form-container{
+
+.table-container button:hover {
+  box-shadow: 3px 2px 10px rgb(223, 222, 222);
+}
+
+/* Mobile responsiveness
+@media (max-width: 600px) {
+  .table-container th, 
+  .table-container td {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  .table-container .description {
+    max-width: 180px;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-container, .add-list-container, .add-income-container{
     background-color: #fff;
     border-radius: 11px;
     display: flex;
@@ -204,12 +369,13 @@ html{
     color: #ac9cec;
 }
 .form{
+    margin-top: 50px;
     width: 90%;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
 }
 
 .fields{
@@ -236,9 +402,11 @@ html{
     font-size: 1.6rem;
 }
 .fields input:focus ~ label{
-    top: -29px;
+    top: -13px;
     color: #3513a3;
-    font-size: 2rem;
+    /* font-size: 1.rem; */
+    background-color: #fff;
+    padding: 0px 5px;
 }
 .actions{
     display: flex;
@@ -263,4 +431,8 @@ html{
     font-weight: 700;
    background: linear-gradient(to right,#3513a3,#087f5b);
    color: #fff;
+   transition: all .4s;
+}
+.add:hover, .clear:hover{
+    box-shadow: 5px 7px 20px rgb(182, 181, 181);
 }
