@@ -83,7 +83,7 @@ function addIncomeList(){
        
         renderIncome();
         saveTrack();
-        fContainer.classList.toggle('hello');
+        fContainer.classList.remove('hello');
     }
     
 
@@ -147,7 +147,7 @@ function addExpenses(){
     
     renderExpenses();
     saveTrack()
-    fContainer.classList.toggle('hello');
+    fContainer.classList.remove('hello');
 }
 
 addExpense.addEventListener('click', addExpenses)
