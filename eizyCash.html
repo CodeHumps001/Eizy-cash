@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/dashboard.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
 </head>
 <body>
     <main>
@@ -22,6 +23,8 @@
 <span>Dashboard</span>
 
                 </li>
+
+                <p id="d-e">Add Expenses</p>
             </div>
 
             <!--main section-->
@@ -33,7 +36,7 @@
                             <div class="details">
 
                                 <h2>Income</h2>
-                                <p>GHS <span> 500.00</span></p>
+                                <p>GHS <span id="income-amount"> 0.00</span></p>
                             </div>
                             <div class="glow">
                                
@@ -43,7 +46,7 @@
                              <div class="details">
 
                                 <h2>Expense</h2>
-                                <p>GHS <span> 500.00</span></p>
+                                <p>GHS <span id="expenses-amount"> 0.00</span></p>
                             </div>
                             <div class="glow">
                                
@@ -54,45 +57,49 @@
 
                
 
-                <div class="form-container">\
-                    <div class="add-list-container ">
+                <div class="form-container" id="f-c">
+                    <div class="add-list-container " id="expenses-form">
 
                         <div class="info">
                             <h1>Track Expenses</h1>
                             <p>fill in the fields with bryour <br>expense details</p>
     
                         </div>
-                        <form action="" class="form">
+                        
+                        <div action="" class="form">
                             <div class="fields">
-                                <input type="text">
+                                <input type="text" id="expense-name" required>
                                 <label for="">Expense name</label>
                             </div>
                             <div class="fields">
-                                <input type="text">
+                                <input type="text" id="expense-description" required>
                                 <label for="">descrippion</label>
                             </div>
                             <div class="fields">
-                                <input type="number">
+                                <input type="number" id="expense-amount" required>
                                 <label for="">amount</label>
                             </div>
     
                             <div class="actions">
                                 <button class="add" id="add-expense">Add To List</button>
-                                <p>You want to add income? <br><span>click here</span>
+                                <p>You want to add income? <br><span id="t-income">click here</span>
                                 </p>
                             </div>
-                        </form>
+                        </div>
                     </div>
-                    <div class="add-income-container hidden">
+                    <div class="add-income-container hidden" id="income-form">
 
                         <div class="info">
                             <h1>Track Expenses</h1>
                             <p>Fill in the amount of yours with one step.</p>
     
                         </div>
-                        <form action="" class="form">
+                        <div class="error">
+                            <p id="error" class="hidden">All fields required!</p>
+                        </div>
+                        <div  class="form">
                             <div class="fields">
-                                <input type="number">
+                                <input type="number" id="income-input" required>
                                 <label for="">Income</label>
                             </div>
     
@@ -101,7 +108,7 @@
                                 <p>You want to add expenses? <br><span id="t-expenses">click here</span>
                                 </p>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
                  <div class="expense-list">
@@ -109,6 +116,11 @@
                         <h2>Expenses History</h2>
                         <button class="clear" id="clear">Clear All </button>
                     </div>
+                    <select name="" id="select-case">
+                        <option value="Alter">Alter by type</option>
+                        <option value="income">income</option>
+                        <option value="expenses">expences</option>
+                    </select>
                     <div class="table-container">
                         <table>
                                 <thead>
@@ -120,19 +132,8 @@
                                         <th>actions</th>
                                     </tr>
                                 </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Mango</td>
-                                    <td class="description">Fruit for the family</td>
-                                    <td>19</td>
-                                    <td>11 / 05/ 25</td>
-                                    <td><button>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  class="del-icon">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
-</svg>
-
-                                    </button></td>
-                                </tr>
+                            <tbody id="t-body">
+                                
                                
                             </tbody>
                         </table>
@@ -141,5 +142,8 @@
             </div>
         </section>
     </main>
+
+
+    <script src="./main.js"></script>
 </body>
 </html>
