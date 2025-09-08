@@ -14,7 +14,7 @@
     <main>
         <section class="dashboard">
             <div class="sidebar">
-                <h1>👋, Yaw</h1>
+                <h1>👋, <span id="name"></span></h1>
 
                 <li class="active">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="icon">
@@ -144,6 +144,12 @@
     </main>
 
 
+    <script>
+        const name = document.getElementById('name')
+        const user = prompt("What if your first name: ")
+        
+        name.innerHTML = user
+    </script>
     <script src="./main.js"></script>
 </body>
 </html>

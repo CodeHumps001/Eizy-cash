@@ -329,6 +329,11 @@
        .sidebar p{
     display: flex !important;
 }
+.sidebar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .form-container{
     display: none;

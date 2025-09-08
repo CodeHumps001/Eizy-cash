@@ -17,6 +17,8 @@ const clearAll = document.getElementById('clear')
 
 
 
+
+
 function toggleForms(){
      expensesForm.classList.toggle('hidden');
      incomeForm.classList.toggle('hidden');
