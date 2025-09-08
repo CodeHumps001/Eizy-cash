@@ -142,7 +142,7 @@
             </div>
 
             <div class="alert" id="welcomeMessage">
-                <h1>👋Welcome, <span id="message-name">Yaw</span>.</h1>
+                <h1>👋Welcome, <span id="message-name"></span>.</h1>
                 <p>Your <span>eizyCash</span> app is ready , stay on top of your finances with confidence.</p>
             </div>
         </section>
@@ -151,6 +151,7 @@
 
     <script>
         const name = document.getElementById('name');
+        const showName = document.getElementById('message-name')
 let savedName = localStorage.getItem('user');
 
 if (savedName) {
@@ -164,6 +165,7 @@ if (savedName) {
 function showWelcomeMessage(name) {
   const alertBox = document.getElementById("welcomeMessage");
   alertBox.classList.add("show");
+  showName.innerHTML = name;
 
   // Hide after 7 seconds
   setTimeout(() => {
