@@ -11,6 +11,7 @@
     color: #000;
     text-transform: capitalize;
     font-weight: bolder;
+    
 }
 .hello{
     display: flex !important;
@@ -108,7 +109,7 @@ html{
     width: 92vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 700px 400px;
+    grid-template-columns: 700px 1fr;
     grid-template-rows: 250px 600px;
     gap: 15px;
     
@@ -486,6 +487,40 @@ html{
 }
 
 
+
+/*Alert Css*/
+
+.alert{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 250px;
+    background-color: #000;
+    padding: 10px;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateX(-100%);
+  z-index: 1000;
+ transition:  transform 0.5s ease;
+}
+.alert.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+.alert h1{
+    font-size: 2rem;
+}
+.alert p{
+    font-size: 1.1rem;
+    margin-top: 10px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+.alert p span{
+    color: #f33376;
+}
 
 /*animations*/
 .fade-in{

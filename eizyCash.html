@@ -140,6 +140,11 @@
                     </div>
                  </div>
             </div>
+
+            <div class="alert" id="welcomeMessage">
+                <h1>👋Welcome, <span id="message-name">Yaw</span>.</h1>
+                <p>Your <span>eizyCash</span> app is ready , stay on top of your finances with confidence.</p>
+            </div>
         </section>
     </main>
 
@@ -154,6 +159,21 @@ if (savedName) {
     const user = prompt("What is your first name: ");
     localStorage.setItem('user', user);
     name.innerHTML = user; // <-- use user instead of savedName
+}
+
+function showWelcomeMessage(name) {
+  const alertBox = document.getElementById("welcomeMessage");
+  alertBox.classList.add("show");
+
+  // Hide after 7 seconds
+  setTimeout(() => {
+    alertBox.classList.remove("show");
+  }, 7000);
+}
+
+// Example: call it after you fetch username
+if (savedName) {
+  showWelcomeMessage(savedName);
 }
 
         
