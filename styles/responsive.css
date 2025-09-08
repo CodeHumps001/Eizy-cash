@@ -75,9 +75,7 @@
 .sidebar li{
     display: none;
 }
-    .sidebar p{
-    display: flex !important;
-}
+ 
 
 .track-component{
    
@@ -328,6 +326,9 @@
 
 @media (max-width: 677px) {
 
+       .sidebar p{
+    display: flex !important;
+}
 
 .form-container{
     display: none;
