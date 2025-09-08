@@ -145,10 +145,19 @@
 
 
     <script>
-        const name = document.getElementById('name')
-        const user = prompt("What is your first name: ")
+        const name = document.getElementById('name');
+let savedName = localStorage.getItem('user');
+
+if (savedName) {
+    name.innerHTML = savedName;
+} else {
+    const user = prompt("What is your first name: ");
+    localStorage.setItem('user', user);
+    name.innerHTML = user; // <-- use user instead of savedName
+}
+
         
-        name.innerHTML = user
+        
     </script>
     <script src="./main.js"></script>
 </body>
