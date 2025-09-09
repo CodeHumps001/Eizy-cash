@@ -13,6 +13,10 @@
     font-weight: bolder;
     
 }
+#startDate{
+    color: #a61e4d;
+    font-size: 1.3rem;
+}
 .hello{
     display: flex !important;
 }
@@ -143,7 +147,12 @@ html{
 }
 .income .glow{
     /* background: linear-gradient(to right, #000 , #000); */
-    height: 70%;
+    
+    color: grey;
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
     /* border-radius: 70% 300% 70% 80%; */
 
 }
@@ -151,7 +160,7 @@ html{
     
     height: 70%;
      /* background: linear-gradient(to right, #000 , #000); */
-    border-radius: 0% 70% 0% 10%;
+   color: #a61e4d;
     
 }
 .income .details {
@@ -232,7 +241,8 @@ html{
     font-size: 2rem;
     letter-spacing: .1rem;
     font-weight: 600;
-    color: #3513a3;
+    color: #a61e4d;
+    margin-bottom: 15px;
 }
 .clear{
     padding: 7px 20px;

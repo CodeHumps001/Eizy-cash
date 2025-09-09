@@ -199,8 +199,7 @@ function clearAllList(){
     tableBody.innerHTML = ``
     expenseList = []
     incomeList = []
-    totalIncome = 0
-    totalExpenses = 0
+    
     saveTrack()
     
 }

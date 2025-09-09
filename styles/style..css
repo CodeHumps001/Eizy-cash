@@ -2,4 +2,277 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+html{
+    font-size: 67.37%;
+}
+
+.hidden{
+    display: none !important;
+}
+.header{
+    width: 100vw;
+    padding: 20px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.logo img{
+    width: 60px;
+    height: 60px;   
+    border-radius: 50%;
+
+}
+.logo h1{
+    font-size: 2.9rem;
+    color: #51cf66;
+}
+
+.nav-links{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links li{
+    list-style: none;
+}
+.nav-links li a, .start-free{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: rgb(166, 165, 165);
+}
+
+
+.nav-links  .start a, .start-free{
+    padding: 15px 20px;
+    background-color: #51cf66;
+    border-radius: 100px;
+    color: white;
+    font-weight: 600;
+    transition: all .4s;
+}
+.nav-links  .start a:hover, .start-free:hover{
+    background-color: #0e4218;
+}
+
+.humburger{
+    padding: 5px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.humburger span{
+    width: 90%;
+    height: 7px;
+    background-color: #51cf66;
+}
+
+
+
+/*Hero section CSS*/
+.hero-section{
+    width: 100vw;
+    padding: 90px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-message , .hero-image{
+    width: 45%;
+    height: 600px;
+    overflow: hidden;
+    
+}
+.hero-message{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+.message-header{
+    max-width: 500px;
+    font-size: 5rem;
+    font-weight: 900;
+    background: linear-gradient(to left,#0e4218, #51cf66);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    
+    
+}
+.message-paragraph{
+    max-width: 400px;
+    font-size: 1.7rem;
+    line-height: 1.6;
+    color: #888;
+}
+
+.start-free{
+    width: 200px;
+    text-align: center;
+}
+
+
+
+
+.hero-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+.hero-image img{
+    width: 90%;
+    height: 100%;
+    text-align: center;
+}
+
+
+
+
+/*Feature section css*/
+
+.feature{
+    width: 100vw;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-grid{
+    width: 70%;
+    height: auto;
+    /* margin-bottom: 60px; */
+    padding: 0px 20px;
+    display: grid;
+    gap: 70px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 0 auto;
+}
+.feature-message{
+    padding: 20px;
+
+}
+.feature-number{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #d2ecd6;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #0e4218;
+    margin-bottom: 10px;
+}
+.feature-header{
+    font-size: 2.5rem;
+    color: #031306;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.feature-paragraph{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #002f0a;
+}
+.feature-image{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+}
+.feature-image:before{
+    content: '';
+    width: 300px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px dashed #51cf66;
+   
+    position: absolute;
+    z-index: -11;
+}
+
+.feature-image img{
+    height: 300px;
+    width: 200px;
+}
+
+
+
+
+
+.action-section{
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     background: linear-gradient(to left,#0e4218, #51cf66);
+    gap: 30px;
+   overflow: hidden;
+    
+}
+.action-section p{
+    max-width: 70%;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+
+
+.footer-section{
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+    padding: 40px;
+    gap: 50px;
+    background: linear-gradient(to left,#c3e5ca, #f5f5f5);
+}
+
+.other ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.other ul li{
+    list-style: none;
+}
+
+.other ul li a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #888;
+}
+
+
+.other ul li a:hover{
+    color: #51cf66;
+    text-decoration: underline 2px #002f0a;
 }
