@@ -166,16 +166,18 @@ html{
 .income .details {
     padding: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    align-items: end;
     color: #5ef7c9;
     background: linear-gradient(to right, #000 , #000);
 }
 .expense .details {
     padding: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    align-items: end;
     color: #f57171;
     background: linear-gradient(to right, #222 , #444);
 }

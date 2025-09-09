@@ -20,9 +20,9 @@
 
                 <li class="active">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="icon">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-</svg>
-<span>Dashboard</span>
+                <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                 </svg>
+        <span>Dashboard</span>
 
                 </li>
 
@@ -37,12 +37,10 @@
                     <div class="card-container">
                         <div class="income">
                             <div class="details">
-
                                 <h2>Income</h2>
                                 <p>GHS <span id="income-amount"> 0.00</span></p>
                             </div>
-                            <div class="glow" >
-                               
+                            <div class="glow" >                             
                             </div>
                         </div>
                         <div class="expense">
@@ -157,7 +155,7 @@
     <script>
 
 
-       const name = document.getElementById('name');
+        const name = document.getElementById('name');
         const showName = document.getElementById('message-name');
         const dateCard = document.getElementById('startDate'); // card where you’ll display the date
 
@@ -174,8 +172,11 @@
             hour: 'numeric',   // 2
             minute: '2-digit', // 15
         };
+
+        
         return new Date().toLocaleString('en-US', options);
         }
+
 
         if (savedName) {
         name.innerHTML = savedName;
@@ -203,7 +204,7 @@
         // Hide after 7 seconds
         setTimeout(() => {
             alertBox.classList.remove("show");
-        }, 7000);
+        }, 3000);
         }
 
         // Show message if name is already saved
