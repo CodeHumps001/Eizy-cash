@@ -113,7 +113,7 @@ html{
     width: 92vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 700px 1fr;
+    grid-template-columns: 700px 1fr ;
     grid-template-rows: 250px 600px;
     gap: 15px;
     
@@ -504,8 +504,8 @@ html{
 .alert{
     position: fixed;
     top: 20px;
-    right: 20px;
-    width: 250px;
+    right: 10px;
+    width: 350px;
     background-color: #000;
     padding: 10px;
     color: white;
