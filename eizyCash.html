@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eizyCash | dashboard</title>
+    <link rel="stylesheet" href="">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -155,47 +156,60 @@
     <script>
 
 
-        const name = document.getElementById('name');
+       const name = document.getElementById('name');
         const showName = document.getElementById('message-name');
         const dateCard = document.getElementById('startDate'); // card where you’ll display the date
 
         let savedName = localStorage.getItem('user');
         let startDate = localStorage.getItem('startDate');
 
-        if (savedName) {
-            name.innerHTML = savedName;
-        } else {
-            const user = prompt("What is your first name: ");
-            localStorage.setItem('user', user);
-            name.innerHTML = user;
+        // Function to return a friendly date
+        function getFriendlyDate() {
+        const options = {
+            weekday: 'short',  // e.g. Tue
+            year: 'numeric',   // 2025
+            month: 'long',     // September
+            day: 'numeric',    // 9
+            hour: 'numeric',   // 2
+            minute: '2-digit', // 15
+        };
+        return new Date().toLocaleString('en-US', options);
+        }
 
-            // Save start date (only the first time)
-            const now = new Date().toLocaleString(); // Date + Time in readable format
-            localStorage.setItem('startDate', now);
-            startDate = now;
+        if (savedName) {
+        name.innerHTML = savedName;
+        } else {
+        const user = prompt("What is your first name: ");
+        localStorage.setItem('user', user);
+        name.innerHTML = user;
+
+        // Save start date (only first time)
+        const now = getFriendlyDate();
+        localStorage.setItem('startDate', now);
+        startDate = now;
         }
 
         // Display start date on dashboard card
         if (startDate && dateCard) {
-            dateCard.innerHTML = `Started using app on: <b>${startDate}</b>`;
+        dateCard.innerHTML = `Started using EizyCash on <b>${startDate}</b>`;
         }
 
         function showWelcomeMessage(name) {
-            const alertBox = document.getElementById("welcomeMessage");
-            alertBox.classList.add("show");
-            showName.innerHTML = name;
+        const alertBox = document.getElementById("welcomeMessage");
+        alertBox.classList.add("show");
+        showName.innerHTML = name;
 
-            // Hide after 7 seconds
-            setTimeout(() => {
-                alertBox.classList.remove("show");
-            }, 7000);
+        // Hide after 7 seconds
+        setTimeout(() => {
+            alertBox.classList.remove("show");
+        }, 7000);
         }
 
         // Show message if name is already saved
         if (savedName) {
-            showWelcomeMessage(savedName);
-            }
-        
+        showWelcomeMessage(savedName);
+        }
+
     </script>
     <script src="./main.js"></script>
 </body>

@@ -258,6 +258,7 @@ html{
 
 
 .table-container {
+    margin-top: 20px !important;
     padding: 10px 0px;
   width: 100%;
   height: 95%;
@@ -280,7 +281,7 @@ html{
 
 
 .table-container thead {
-  background: #777; 
+  background: #51cf66; 
     font-size: 1.5rem;
   color: #fff;
   border-radius: 11px;
@@ -397,7 +398,7 @@ html{
     align-items: center;
     gap: 20px;
     padding: 20px 5px;
-    grid-row: ;
+    
 }
 
 .add-income-container, .add-list-container{
