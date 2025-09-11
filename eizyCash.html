@@ -152,67 +152,6 @@
     
 
 
-    <script>
-
-
-        const name = document.getElementById('name');
-        const showName = document.getElementById('message-name');
-        const dateCard = document.getElementById('startDate'); // card where you’ll display the date
-
-        let savedName = localStorage.getItem('user');
-        let startDate = localStorage.getItem('startDate');
-
-        // Function to return a friendly date
-        function getFriendlyDate() {
-        const options = {
-            weekday: 'short',  // e.g. Tue
-            year: 'numeric',   // 2025
-            month: 'long',     // September
-            day: 'numeric',    // 9
-            hour: 'numeric',   // 2
-            minute: '2-digit', // 15
-        };
-
-        
-        return new Date().toLocaleString('en-US', options);
-        }
-
-
-        if (savedName) {
-        name.innerHTML = savedName;
-        } else {
-        const user = prompt("What is your first name: ");
-        localStorage.setItem('user', user);
-        name.innerHTML = user;
-
-        // Save start date (only first time)
-        const now = getFriendlyDate();
-        localStorage.setItem('startDate', now);
-        startDate = now;
-        }
-
-        // Display start date on dashboard card
-        if (startDate && dateCard) {
-        dateCard.innerHTML = `Started using EizyCash on <b>${startDate}</b>`;
-        }
-
-        function showWelcomeMessage(name) {
-        const alertBox = document.getElementById("welcomeMessage");
-        alertBox.classList.add("show");
-        showName.innerHTML = name;
-
-        // Hide after 7 seconds
-        setTimeout(() => {
-            alertBox.classList.remove("show");
-        }, 3000);
-        }
-
-        // Show message if name is already saved
-        if (savedName) {
-        showWelcomeMessage(savedName);
-        }
-
-    </script>
-    <script src="./main.js"></script>
+    <script type="module" src="./dashboard.js"></script>
 </body>
 </html>

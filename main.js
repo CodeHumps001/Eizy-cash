@@ -255,6 +255,7 @@ function alterDisplay(){
     }else{
         renderExpenses()
     }
+    
 }
 
 selectElement.addEventListener('change', alterDisplay)
