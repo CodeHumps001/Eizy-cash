@@ -151,16 +151,21 @@ html{
     color: grey;
     padding: 10px;
     display: flex;
-    justify-content: end;
+    justify-content: start;
     align-items: end;
+    
+    font-size: 2rem;
     /* border-radius: 70% 300% 70% 80%; */
 
 }
 .expense .glow{
     
-    height: 70%;
-     /* background: linear-gradient(to right, #000 , #000); */
-   color: #a61e4d;
+     color: #a61e4d;
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    font-size: 2rem;
     
 }
 .income .details {

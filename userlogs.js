@@ -2,12 +2,15 @@
 // ----- Handles localStorage & date formatting -----
 
 export function getUser() {
-  return localStorage.getItem("user");
+  const data = localStorage.getItem("user");
+  return data ? JSON.parse(data) : null;   // safely parse or return null
 }
 
-export function setUser(name) {
-  localStorage.setItem("user", name);
+export function setUser(name, number) {
+  const user = { name, number };               // bundle data
+  localStorage.setItem("user", JSON.stringify(user)); // store as string
 }
+
 
 export function getStartDate() {
   return localStorage.getItem("startDate");
